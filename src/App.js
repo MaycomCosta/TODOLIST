@@ -137,7 +137,7 @@ function App() {
         {todoEditing === todo.id ? (
         <ButtonSubmit 
         onClick={() => editTodo(todo.id)}>
-        <img src={Finished}/>
+        <img src={Finished} alt='checked as done'/>
         </ButtonSubmit>
         ) 
         : 
@@ -147,12 +147,12 @@ function App() {
           type="submit"
           onClick={() => setTodoEditing(todo.id)}
           /*onChange={() => showLastEdit(todo.id)}*/>
-          <PencilImg src={Pencil}/>
+          <PencilImg src={Pencil} alt='An edit button'/>
           </EditButton>
 
           <ButtonDeleteTodo 
           onClick={() => deleteTodo(todo.id)}>
-          <TrashImg src={Trash}/>
+          <TrashImg src={Trash} alt='An delete button'/>
           </ButtonDeleteTodo>
         </>
         )}
