@@ -27,6 +27,13 @@ function App() {
   const [todoEditing, setTodoEditing] = useState(null)
   const [editingText, setEditingText] = useState("")
 
+
+  react.useEffect(() => {
+    const temp = JSON.stringify(todos)
+    localStorage.setItem("todos", temp)
+  }, [todos])
+
+
   react.useEffect(() => {
     const temp = localStorage.getItem("todos")
     const loadedTodos = JSON.parse(temp)
@@ -36,11 +43,6 @@ function App() {
     }
     
   }, [])
-
-  react.useEffect(() => {
-    const temp = JSON.stringify(todos)
-    localStorage.setItem("todos", temp)
-  }, [todos])
 
   function handleSubmit(e) {
     e.preventDefault()
