@@ -103,6 +103,9 @@ function App() {
 
   return (
     <MainContainer>
+      
+      <Title>To-Do...</Title>
+
       <FormTodo onSubmit={handleSubmit}>
         <input 
         placeholder="Enter a todo"
@@ -111,8 +114,6 @@ function App() {
         onChange={e => setTodo(e.target.value)} />
         <button type='submit'>Add todo</button>
       </FormTodo>
-
-      <Title>To-Do...</Title>
 
       {todos.map((todo) =><ContainerInputs key={todo.id}>
         { todoEditing === todo.id ? (<InputEditing
