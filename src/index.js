@@ -1,14 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
-
+import { createRoot } from 'react-dom/client'
 import GlobalStyle from './styles/globalstyles'
+import Todo from './Page/Todo'
 
-
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'))
+root.render(
   <>
-    <App />
-    <GlobalStyle/>
-  </>,
-  document.getElementById('root')
+    <Todo />
+    <GlobalStyle />
+  </>
 )
