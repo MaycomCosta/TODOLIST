@@ -93,7 +93,6 @@ const Todo = () => {
 
   return (
     <C.MainContainer>
-        <C.Todo>
         <C.Title>To-Do...</C.Title>
         <C.FormTodo onSubmit={handleSubmit}>
           <input 
@@ -106,7 +105,8 @@ const Todo = () => {
             }}/>
           <C.Button disabled={!inputValue} type='submit'>Add todo</C.Button>
         </C.FormTodo>
-        {todos.map((todo) =><C.ContainerInputs key={todo.id}>
+        <C.Todo>
+        {todos.map((todo) => <C.ContainerInputs key={todo.id}>
           { todoEditing === todo.id ? (
           <C.InputEditing
             type='text' 

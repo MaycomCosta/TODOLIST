@@ -14,6 +14,9 @@ export const MainContainer = styled.div`
   @media screen and (max-width: 768px) {
     max-width: 100%;
   }
+  @media screen and (max-width: 480px) {
+    max-width: 100%;
+  }
 `
 export const Todo = styled.div`
     min-height: 100vh;
@@ -22,9 +25,15 @@ export const Todo = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    @media screen and (max-width: 768px) {
-    max-width: 100%;
-  }
+    
+    @media (max-width: 768px) {
+  width: 100%;
+  overflow: hidden;
+ }
+ @media (max-width: 480px) {
+  width: 100%;
+  overflow: hidden;
+ }
 `
 export const FormTodo = styled.form`
 display: flex;
@@ -50,6 +59,22 @@ input {
   font-size: 20px;
   line-height: 20px;
 }
+`
+export const ContainerShowTodo = styled.div`
+  width: 100%;
+  margin: 5px 0;
+  gap: 35px;
+  padding: 1.5em;
+  word-break: break-word;
+
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  color: #ffffff;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
 `
 export const Button = styled.button`
   background-color: ${props => props.disabled ? '#02192B' : '#FF9D00'};
@@ -115,11 +140,11 @@ export const ContainerInputs = styled.div`
   flex-direction: row-reverse;
   align-items: center;
 
-  @media(max-width: 780px){
-    width: 70em;
-    }
-    @media(max-width: 480px){
-    width: 100em;
+ @media screen and (max-width: 768px) {
+    max-width: 100%;
+  }
+    @media screen and(max-width: 480px){
+    width: 100vh;
     }
 `
 export const InputEditing = styled.input`
@@ -137,22 +162,6 @@ export const InputEditing = styled.input`
   display: flex;
   justify-content: center;
   flex-direction: column;
-`
-export const ContainerShowTodo = styled.div`
-  width: 100%;
-  margin: 5px 0;
-  gap: 35px;
-  padding: 1.5em;
-  word-break: break-word;
-
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
-  color: #ffffff;
-
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  text-align: center;
 `
 export const TodoText = styled.p`
   font-size: 20px;
