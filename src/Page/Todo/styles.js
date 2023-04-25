@@ -11,11 +11,9 @@ export const MainContainer = styled.div`
   gap: 20px;
 
   background-color: #11395a;
-
-  @media (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     max-width: 100%;
   }
-
 `
 export const Todo = styled.div`
     min-height: 100vh;
@@ -24,10 +22,8 @@ export const Todo = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 20px;
-
-    @media (max-width: 480px) {
+    @media screen and (max-width: 768px) {
     max-width: 100%;
-    min-height: calc(100vh - 150px);
   }
 `
 export const FormTodo = styled.form`
@@ -37,33 +33,23 @@ align-items: center;
 gap: 20px;
 
 input {
-width: 100%;
-height: 45px;
+  width: 100%;
+  height: 45px;
 
-padding: 10px 20px;
+  padding: 10px 20px;
 
-color: #464647;
-background: #ffffff;
-box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
-border-radius: 8px;
-border: none;
+  color: #464647;
+  background: #ffffff;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: none;
 
-font-family: Montserrat;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 20px;
-
-@media (max-width: 480px) {
-      width: 90%;
-      font-size: 16px;
-      height: 35px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    width: 90%;
-  }
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+}
 `
 export const Button = styled.button`
   background-color: ${props => props.disabled ? '#02192B' : '#FF9D00'};
@@ -119,7 +105,7 @@ margin-top: 3em;
 `
 export const ContainerInputs = styled.div`
   width: 30em;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
 
   background: rgba(255, 255, 255, 0.25);
   border-radius: 10px;
@@ -129,8 +115,11 @@ export const ContainerInputs = styled.div`
   flex-direction: row-reverse;
   align-items: center;
 
-  @media(max-width:320px){
-    width: 250px;
+  @media(max-width: 780px){
+    width: 70em;
+    }
+    @media(max-width: 480px){
+    width: 100em;
     }
 `
 export const InputEditing = styled.input`
