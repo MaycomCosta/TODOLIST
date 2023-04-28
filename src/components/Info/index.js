@@ -17,7 +17,7 @@ import * as C from './styles.js'
     <C.SectionCenter>
         <h1>Hi, all good?</h1>
         <p>A project aimed at helping people get organized in their day-to-day tasks</p>
-        <p>You can know another project, a <a href='https://foodstobuy.netlify.app/' target='_blank' rel='noreferrer'>Crocery bud</a>!</p>
+        <p>You can know another project, a <a href='https://controleseudindin.netlify.app/' target='_blank' rel='noreferrer'>Finance control</a>!</p>
         <p>You can also follow me on 
           <a href='https://www.linkedin.com/in/maycomcosta/' target='_blank' rel='noreferrer'>Linkedin</a>, 
           <a href='https://github.com/MaycomCosta' target='_blank' rel='noreferrer'>Github</a> and 
