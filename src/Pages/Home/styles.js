@@ -9,14 +9,27 @@ export const MainContainer = styled.div`
   overflow-x: hidden;
   min-height: calc(100vh - 50px);
   gap: 20px;
+  margin: 0 auto;
 
   background-color: #11395a;
-  @media screen and (max-width: 768px) {
-    max-width: 100%;
-  }
-  @media screen and (max-width: 480px) {
-    max-width: 100%;
-  }
+
+  .info-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    color: #FF9D00;
+    font-weight: bold;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+
+    :hover {
+      color: #FF7C03;
+    }
+ }
+
 `
 export const Todo = styled.div`
     min-height: 100vh;
@@ -26,14 +39,6 @@ export const Todo = styled.div`
     align-items: center;
     gap: 20px;
     
-    @media (max-width: 768px) {
-  width: 100%;
-  overflow: hidden;
- }
- @media (max-width: 480px) {
-  width: 100%;
-  overflow: hidden;
- }
 `
 export const FormTodo = styled.form`
 display: flex;
@@ -139,13 +144,6 @@ export const ContainerInputs = styled.div`
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-
- @media screen and (max-width: 768px) {
-    max-width: 100%;
-  }
-    @media screen and(max-width: 480px){
-    width: 100vh;
-    }
 `
 export const InputEditing = styled.input`
   width: 100%;

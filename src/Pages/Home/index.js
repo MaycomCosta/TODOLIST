@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
+
 import * as C from './styles'
-import Footer from '../../components/Footer'
+import { AiOutlineInfoCircle } from 'react-icons/ai'
+
 
 
 const getLocalStorage = () => {
@@ -12,7 +15,7 @@ const getLocalStorage = () => {
   }
 }
 
-const Todo = () => {
+const Home = () => {
   // const [todos, setTodos] = useState([])
   const [todos, setTodos] = useState(getLocalStorage())
   const [todo, setTodo] = useState('')
@@ -20,6 +23,7 @@ const Todo = () => {
   const [editingText, setEditingText] = useState('')
   const [inputValue, setInputValue] = useState('')
   const [inputEditValue, setInputEditValue] = useState('')
+  const history = useHistory()
 
 
   useEffect(() => {
@@ -90,9 +94,18 @@ const Todo = () => {
     setEditingText('')
   }
 
+  const  handleInfoClick = () =>{
+    setTimeout(() => {
+      history.push('/info')
+    }, 1000)  
+  }
+
 
   return (
     <C.MainContainer>
+        <button className='info-button' onClick={handleInfoClick}>
+        <AiOutlineInfoCircle />
+      </button>
         <C.Title>To-Do...</C.Title>
         <C.FormTodo onSubmit={handleSubmit}>
           <input 
@@ -159,9 +172,8 @@ const Todo = () => {
           </C.ContainerInputs>
           )}
         </C.Todo>
-      <Footer />
     </C.MainContainer>
   )
 }
 
-export default Todo
+export default Home
