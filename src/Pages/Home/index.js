@@ -103,9 +103,10 @@ const Home = () => {
 
   return (
     <C.MainContainer>
+      <C.ContainerAll>
         <button className='info-button' onClick={handleInfoClick}>
         <AiOutlineInfoCircle />
-      </button>
+        </button>
         <C.Title>To-Do...</C.Title>
         <C.FormTodo onSubmit={handleSubmit}>
           <input 
@@ -172,6 +173,7 @@ const Home = () => {
           </C.ContainerInputs>
           )}
         </C.Todo>
+      </C.ContainerAll>
     </C.MainContainer>
   )
 }

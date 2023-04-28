@@ -7,7 +7,8 @@ export const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  min-height: calc(100vh - 50px);
+  height: 100%;
+  min-height: 100vh;
   gap: 20px;
   margin: 0 auto;
 
@@ -29,15 +30,21 @@ export const MainContainer = styled.div`
       color: #FF7C03;
     }
  }
-
+`
+export const ContainerAll = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 `
 export const Todo = styled.div`
-    min-height: 100vh;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 100%;
     
 `
 export const FormTodo = styled.form`
@@ -80,6 +87,18 @@ export const ContainerShowTodo = styled.div`
   justify-content: start;
   align-items: center;
   text-align: center;
+`
+export const ContainerInputs = styled.div`
+  width: 30em;
+  padding: 10px;
+
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 `
 export const Button = styled.button`
   background-color: ${props => props.disabled ? '#02192B' : '#FF9D00'};
@@ -132,18 +151,6 @@ export const Title = styled.h3`
 color: #FF9D00;
 font-size: 30px;
 margin-top: 3em;
-`
-export const ContainerInputs = styled.div`
-  width: 30em;
-  padding: 10px;
-
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
-  color: #ffffff;
-
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
 `
 export const InputEditing = styled.input`
   width: 100%;
