@@ -12,7 +12,7 @@ export const MainContainer = styled.div`
   gap: 20px;
   margin: 0 auto;
 
-  background-color: #11395a;
+  background-color: #0f2637;
 
   .info-button {
     position: fixed;
